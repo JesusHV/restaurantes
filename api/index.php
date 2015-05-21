@@ -12,8 +12,8 @@ $app = new \Slim\Slim();
 $app->contentType('application/json');
 
 // idiorm config
-ORM::configure('pgsql:host=localhost;port=5432;dbname=compras;user=postgres;password=123');
-ORM::configure('return_result_sets', true);
+// ORM::configure('pgsql:host=localhost;port=5432;dbname=compras;user=postgres;password=123');
+// ORM::configure('return_result_sets', true);
 
 // == Routes ==	
 require 'routes/compras.php';

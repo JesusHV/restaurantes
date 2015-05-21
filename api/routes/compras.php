@@ -9,18 +9,27 @@
 		// =============================================================
 		$app->get('/', function () use ($app) {
 
-			$compras = ORM::for_table('compras')->find_many();
+			// $compras = ORM::for_table('compras')->find_many();
 			
 			$response = array();
-			foreach ($compras as $key => $value) {
-				$response[] = array(
-								'id' => $value->id,
-								'no_orden' => $value->no_orden,
-								'no_empleado' => $value->no_empleado,
-								'status' => $value->status,
-								'VoBo' => $value->VoBo
-							);
+			// foreach ($compras as $key => $value) {
+			// 	$response[] = array(
+			// 					'id' => $value->id,
+			// 					'no_orden' => $value->no_orden,
+			// 					'no_empleado' => $value->no_empleado,
+			// 					'status' => $value->status,
+			// 					'VoBo' => $value->VoBo
+			// 				);
 				
+			// }
+			for($i=0; $i< 6; $i++){
+				$response[] = array(
+								'id' => 'auoisno',
+								'no_orden' => 'ioasnpcf',
+								'no_empleado' =>'aosnoanfc',
+								'status' => 'auisbnoua',
+								'VoBo' => 'sdfndsa'
+							);
 			}
 
 			$app->response->setStatus(200);

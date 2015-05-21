@@ -59,11 +59,9 @@
   $('#button-compras').on('click', function(){compras()})
   // Función de ver compras
     function compras(e) {
-        $.ajax({
-
-            url: '../api/compras/',
+         $.ajax({
+            url: 'http://localhost/example/api/compras',
             contentType: "application/json",
-
             beforeSend: function() {
             },
             success: function(a) {
@@ -87,7 +85,6 @@
                       '<span>Status compra:</span> <span>' + Status +'</span><br/>'+
                       '<!-- Small modal --><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Mas</button>'+
                       '<div />'
-
                      
                     ).appendTo('#compras')
                 }
