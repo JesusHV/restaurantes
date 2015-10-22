@@ -1,22 +1,19 @@
 <?php 
 
 require '../vendor/autoload.php'; // Module dependencies
-require '../vendor/mailer/Mailerclass.php';
-require '../vendor/idiorm.php';
 require '../vendor/Validator.php';
+// Connection
+require_once '../connection/connection.php';
+
 // == Initialize the app ==
 $app = new \Slim\Slim();
-
 
 // set 'json response' header
 $app->contentType('application/json');
 
-// idiorm config
-// ORM::configure('pgsql:host=localhost;port=5432;dbname=compras;user=postgres;password=123');
-// ORM::configure('return_result_sets', true);
-
 // == Routes ==	
-require 'routes/compras.php';
+require 'routes/routes.php';
+
 
 // == enable CORS ==
 $app->response->headers->set('Access-Control-Allow-Origin', '*');
